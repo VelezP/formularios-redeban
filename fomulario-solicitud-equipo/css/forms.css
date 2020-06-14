@@ -60,6 +60,22 @@ body{
 }
 
 /*Formulario*/
+.container-form label.error,
+.container-form .row .col-6:last-child label.error{
+    color: red;
+    margin: 8px 0 0 0;
+    display: block;
+}
+
+.radiotag label.error{
+    margin: 25px 0 0 0;
+    width: 200px;
+}
+.radiocheck label.error{
+    width: 200px;
+    margin: 35px 0 0 0;
+}
+
 .container-form form{
     margin: 50px 0 0 0;
     padding: 0 20px;
@@ -399,7 +415,51 @@ body{
     text-align: center;
 }
 
-
+/*******POP UP**********/
+.overlay{
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    background:rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.overlay .popup{
+    background: #fff;
+    border-radius: 10px;
+    max-width: 360px;
+    width: 100%;
+    padding: 20px 20px 50px 20px;
+}
+.overlay .popup .close{
+    text-align: right;
+}
+.overlay .popup .close button{
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #808080;
+}
+.overlay .popup .bodypopup{
+    color: #808080;
+    text-align: center;
+    font-size: 16px;
+}
+.overlay .popup .bodypopup h3{
+    color: #002790;
+    font-family: 'helvetica_neuebold';
+    margin: 10px 0 20px 0;
+    font-size: 18px;
+}
 
   /**MEDIAQUERIES***/
   @media screen and (max-width: 650px){
@@ -483,6 +543,12 @@ body{
     }
     .container-form .col-2{
         margin: 15px 0 20px 0;
+    }
+    .overlay .popup .bodypopup h3{
+        font-size: 15px;
+    }
+    .overlay .popup .bodypopup{
+        font-size: 12px;
     }
 
   }
