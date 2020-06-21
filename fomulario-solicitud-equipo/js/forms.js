@@ -90,7 +90,27 @@ $(document).ready(function(){
                 aceptaterminos: {
                     required: true
                 }            
-            }		
+            },
+            submitHandler: function(){
+                var popup     = $('.overlay'); 
+                var closebtn  = $('#closebtn');
+
+                popup.css('display', 'flex');
+                
+                // close buttom
+                closebtn.on('click', (e) =>{
+                    e.preventDefault();
+                    popup.css('display', 'none');
+                });
+                // close listener key
+                $(document).keyup(function(e) {
+                    if (e.key === "Escape") { 
+                        popup.css('display', 'none');
+                    }
+                });                
+
+                return false;
+            }	            		
         });
     }
     
@@ -103,7 +123,8 @@ $(document).ready(function(){
     jQuery.extend(jQuery.validator.messages, {
         maxlength: jQuery.validator.format("Máximo {0} caracteres."),
         minlength: jQuery.validator.format("Mínimo {0} caracteres."),
-        required:  jQuery.validator.format("Campo Obligatorio.")
+        required:  jQuery.validator.format("Campo Obligatorio."),
+        email:     jQuery.validator.format("Ingrese un E-mail válido.")
     });   
 
 });

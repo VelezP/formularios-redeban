@@ -417,6 +417,7 @@ body{
 
 /*******POP UP**********/
 .overlay{
+    display: none;
     position: fixed;
     z-index: 50;
     left: 0;
@@ -426,7 +427,6 @@ body{
     max-width: 100%;
     box-sizing: border-box;
     height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
@@ -460,6 +460,8 @@ body{
     margin: 10px 0 20px 0;
     font-size: 18px;
 }
+
+
 
   /**MEDIAQUERIES***/
   @media screen and (max-width: 650px){
