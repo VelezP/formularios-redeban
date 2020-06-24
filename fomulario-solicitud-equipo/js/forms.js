@@ -124,7 +124,8 @@ $(document).ready(function(){
         maxlength: jQuery.validator.format("Máximo {0} caracteres."),
         minlength: jQuery.validator.format("Mínimo {0} caracteres."),
         required:  jQuery.validator.format("Campo Obligatorio."),
-        email:     jQuery.validator.format("Ingrese un E-mail válido.")
+        email:     jQuery.validator.format("Ingrese un E-mail válido."),
+        digits:    jQuery.validator.format("Ingrese solo números.")
     });   
 
 });
