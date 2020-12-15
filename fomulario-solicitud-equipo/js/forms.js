@@ -34,7 +34,7 @@ $(document).ready(function(){
                 required: true,
                 email: true,
                 minlength: 4,
-                maxlength: 25
+                maxlength: 35
                 },
                 ismerchant: {
                     required:function(){
